@@ -86,8 +86,8 @@ function Ant(x, y, grid) {
     switch(this.direction){
       case RIGHT: this.x = (this.x + 1) % this.grid.length; break;
       case DOWN: this.y = (this.y + 1) % this.grid[0].length; break;
-      case LEFT: this.x = (this.x - 1) % this.grid.length; break;
-      case UP: this.y = (this.y - 1) % this.grid[0].length; break;
+      case LEFT: this.x = (this.x - 1 + this.grid.length) % this.grid.length; break;
+      case UP: this.y = (this.y - 1 + this.grid[0].length) % this.grid[0].length; break;
     }
   }
 
